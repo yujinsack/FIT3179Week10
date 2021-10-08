@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 700,
+  "height": 500,
+  "title": "Population Density of Different Countries",
+  "data": {
+    "url": "https://raw.githubusercontent.com/yujinsack/FIT3179Week10/main/population_density.csv"
+  },
+  "mark": "circle",
+  "params": [
+    {
+      "name": "Country",
+      "select": {"type": "point", "fields": ["Country"]},
+      "bind": "legend"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Population",
+      "type": "quantitative",
+      "title": "Population",
+      "axis": {"tickCount": 6},
+      "scale": {"type": "log", "domain": [1, 10000000000]}
+    },
+    "y": {
+      "field": "LandArea",
+      "title": "Land Area",
+      "type": "quantitative",
+      "axis": {"tickCount": 6},
+      "scale": {"type": "log", "domain": [1, 1000000000]}
+    },
+    "color": {"field": "Country", "type": "nominal"},
+    "size": {
+      "field": "Density",
+      "type": "quantitative",
+      "scale": {"type": "log", "domain": [1, 100000]}
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Population", "type": "quantitative", "format": ","},
+      {"field": "LandArea", "type": "quantitative", "format": ","},
+      {"field": "Density", "type": "quantitative", "format": ","}
+    ],
+    "opacity": {"condition": {"param": "Country", "value": 1}, "value": 0.1}
+  },
+  "config": {}
+}
