@@ -1,0 +1,50 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 400,
+  "description": "A simple radial chart with embedded data.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/yujinsack/FIT3179Week10/main/population_density.csv"
+  },
+  "params": [
+    {
+      "name": "Migrant_filter",
+      "value": 55000,
+      "bind": {
+        "input": "range",
+        "min": 10000,
+        "max": 150000,
+        "step": 100,
+        "name": "Minimum Migrants: "
+      }
+    }
+  ],
+  "transform": [{"filter": "datum.Migrants > Migrant_filter"}],
+  "layer": [
+    {"mark": {"type": "arc", "innerRadius": 30, "stroke": "#fff"}},
+    {
+      "mark": {"type": "text", "radiusOffset": 40},
+      "encoding": {
+        "text": {"field": "Country", "type": "nominal"},
+        "color": {"value": "black"}
+      }
+    }
+  ],
+  "encoding": {
+    "theta": {"field": "Migrants", "type": "quantitative", "stack": true},
+    "radius": {
+      "field": "Migrants",
+      "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}
+    },
+    "color": {
+      "field": "Country",
+      "type": "nominal",
+      "scale": {"scheme": "category20"}
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal", "title": "Country"},
+      {"field": "Migrants", "type": "quantitative"}
+    ]
+  },
+  "config": {}
+}
