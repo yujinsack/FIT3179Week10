@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "World Population Map",
+  "width": 800,
+  "height": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/mtan0046/FIT3179/main/customgeo.topojson",
+    "format": {"type": "topojson", "feature": "custom.geo"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.name",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/yujinsack/FIT3179Week10/main/population_density.csv"
+        },
+        "key": "Country",
+        "fields": ["Population"]
+      }
+    }
+  ],
+  "projection": {"type": "equalEarth"},
+  "mark": {"type": "geoshape"},
+  "encoding": {
+    "color": {
+      "field": "Population",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "yellowgreen",
+        "domain": [100000, 500000, 1000000, 10000000, 100000000]
+      }
+    },
+    "tooltip": [
+      {"field": "properties.name", "type": "nominal", "title": "Country"},
+      {"field": "Population", "type": "quantitative"}
+    ]
+  },
+  "config": {}
+}
