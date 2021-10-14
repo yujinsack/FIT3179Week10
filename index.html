@@ -15,6 +15,7 @@
   
 <div id="scatter_plot"></div>
 <div id="scatter_plot2"></div>
+<div id="scatter_plot3"></div>
 <script type="text/javascript">
 
   var spec2 = "visualization.vl.json";
@@ -26,10 +27,20 @@
 <script type="text/javascript">
 
   var spec2 = "visualization.vl (1).json";
+  var spec3 = "visualization.vl (2).json";
+  var spec4 = "visualization.vl (3).json";
   vegaEmbed('#scatter_plot2', spec2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
+    vegaEmbed('#scatter_plot3', spec3).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+      vegaEmbed('#scatter_plot4', spec4).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
 </script>
+
+
 
 
 </body>
