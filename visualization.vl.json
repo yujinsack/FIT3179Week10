@@ -3,7 +3,7 @@
   "width": 780,
   "height": 500,
   "title": {"text": "Population Density of Different Countries",
-			"fontSize" : 40
+			"fontSize" : 20
   },
   "data": {
     "url": "https://raw.githubusercontent.com/yujinsack/FIT3179Week10/main/population_density.csv"
