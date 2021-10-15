@@ -1,8 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 700,
+  "width": 780,
   "height": 500,
-  "title": "Population Density of Different Countries",
+  "title": {"text": "Population Density of Different Countries",
+			"fontSize" : 20
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/yujinsack/FIT3179Week10/main/population_density.csv"
   },

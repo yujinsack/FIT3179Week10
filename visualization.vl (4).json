@@ -3,6 +3,9 @@
   "data": {
     "url": "https://raw.githubusercontent.com/yujinsack/FIT3179Week10/main/population_density.csv"
   },
+ "title": {"text": "Correlation of Fertility and Median Age in Different Countries",
+			"fontSize" : 20
+  },
   "transform": [
     {
       "filter": {
@@ -14,8 +17,8 @@
     }
   ],
   "mark": "rect",
-  "width": 500,
-  "height": 400,
+  "width": 870,
+  "height": 500,
   "encoding": {
     "x": {
       "title": "Median Age",
@@ -32,7 +35,8 @@
     "color": {
       "scale": {"scheme": "bluepurple"},
       "aggregate": "count",
-      "type": "quantitative"
+      "type": "quantitative",
+"title" : "Country Count"
     }
   },
   "config": {"view": {"stroke": "transparent"}}

@@ -1,8 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
+  "width": 900,
   "height": 500,
-  "title": "World Cities Population",
+  "title":{"text": "World Cities Population",
+			"fontSize" : 20
+  },
   "projection": {"type": "equalEarth"},
   "layer": [
     {
@@ -24,8 +26,14 @@
         "color": {
           "field": "population",
           "type": "quantitative",
-          "scale": {"scheme": "reds"}
-        }
+          "scale": {"scheme": "darkblue"}
+        },
+		"tooltip": [
+      {"field": "city", "type": "nominal", "title": "City"},
+      {"field": "population", "type": "quantitative","title": "Population"},
+	  {"field": "lng", "type": "quantitative","title": "Longitude"},
+	  {"field": "lat", "type": "quantitative","title": "Latitude"}
+    ]
       }
     }
   ],

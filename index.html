@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
@@ -11,15 +11,52 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
   
 </head>
-<body>
-  
-<div id="scatter_plot"></div>
-<div id="scatter_plot2"></div>
-<div id="scatter_plot3"></div>
-<div id="scatter_plot4"></div>
-<div id="scatter_plot5"></div>
-<script type="text/javascript">
+<style>
+body {text-align:center;}
+</style>
+<font size="+3">
 
+<H2 style="font-family:'Sans Serif'">World Population Visualized</H2>
+</font>
+<body bgcolor="#DDAF94" >
+
+
+
+
+
+<div id="scatter_plot3" style="width:80%;"></div></p>
+<p style="margin-left:18%; margin-right:19%;font-size: 18px;"> This visualization shows the population of different countries and some of the factors 
+  that contribute to the change in population of these countries. There currently 
+  are 7.9  billion people with China being the most populous country with a total of 1.9 billion people.
+  It is estimated that the world population increases by 80 million every year. Global life expectancy
+has also improved in recent years to 70 years of age which also contributes to the increase in population.
+Currently, India is on track to overtake China as the most populous country by the year 2030</p>
+<br>
+<br>
+<br>
+<br>
+<div id="scatter_plot2" style="width:80%;" ></div>
+<p style="margin-left:18%; margin-right:19%;font-size: 18px;">This map shows the population of every major city in the world. The circles represent the population in each city. Comparing this map to the country population map, it can be observed that the most populous cities are not in the most populous countries. For example, Tokyo and Jakarta are some of the most populous cities in the world. The reason for this is because people are more attracted to live in cities as it is usually the industrial, commercial and financial hubs. Therefore, most people live in the city for work and entertainment purposes. Urban growth continues to grow mainly in Asia and Africa, as some cities in Europe are beginning to shrink as deaths are starting to outpace births.</p>
+<br>
+<br>
+<br>
+<br>
+<div id="scatter_plot" style="width:80%;" ></div>
+<p style="margin-left:18%; margin-right:19%;font-size: 18px;">Graph shows the relationship between population, land area and the density of the different countries. From the graph we can observe that we can see a clear trend that population increases with the land area aside from the few outliers like Vatican City and Monaco. Although China and India are the most populous countries in the world, they are too big to have a high population density. Currently Macau is the country with the highest population density. In fact, in the top 5 most populated countries 2 of them are territories owned by China which is Macau and Hong Kong.</p>
+<br>
+<br>
+<br>
+<br>
+<div id="scatter_plot4" style="width:80%;"></div>
+<p style="margin-left:18%; margin-right:19%;font-size: 18px;">This pie chart shows the ratio of migrants in different cities. It is quite obvious that the United States and Germany has more migrants than any other country in the world. Majority of the migrants in the United States come from Mexico, China and India. While the migrants in Germany are mainly from Hungary, Serbia and India. The main reason the high number of migrants in the United States is for work purposes. Historically the immigrants usually tackled jobs that native-born Americans avoided. The migrants arrived in Germany for similar reasons which is more economic opportunities. However, there are also groups of migrants that arrived in Germany seeking for religious and political freedom.</p>
+<br>
+<br>
+<br>
+<br>
+<div id="scatter_plot5" style="width:80%;"></div>
+<p style="margin-left:18%; margin-right:19%;font-size: 18px;">From this graph we can clearly see the relationship between fertility and median age of the citizens. The lower the median age the higher the fertility in these countries. This is because it is found that a woman’s fertility rate peaks between late teens and early 20s after which will slowly decline. This explains the trend that we are observing in the graph. The countries with the highest fertility rates are Niger, Mali and Chad. One of the main reasons for high fertility rates in certain countries is because children are needed to work and help bring income to the family.</p>
+
+<script type="text/javascript">
   var spec2 = "visualization.vl.json";
   vegaEmbed('#scatter_plot', spec2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -31,7 +68,7 @@
   var spec2 = "visualization.vl (1).json";
   var spec3 = "visualization.vl (2).json";
   var spec4 = "visualization.vl (3).json";
-  var spec4 = "visualization.vl (4).json";
+  var spec5 = "visualization.vl (4).json";
   vegaEmbed('#scatter_plot2', spec2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
@@ -45,9 +82,6 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
-
-
-
 
 </body>
 </html>

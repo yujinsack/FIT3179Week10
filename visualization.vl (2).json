@@ -1,8 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "World Population Map",
-  "width": 800,
-  "height": 600,
+   "title": {"text": "Country Population Map",
+			"fontSize" : 20
+  },
+  "width": 900,
+  "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/mtan0046/FIT3179/main/customgeo.topojson",
     "format": {"type": "topojson", "feature": "custom.geo"}

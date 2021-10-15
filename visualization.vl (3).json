@@ -1,7 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 500,
-  "height": 400,
+  "width": 900,
+  "height": 500,
+ "title": {"text": "Migrants in Different Countries",
+			"fontSize" : 20
+  },
   "description": "A simple radial chart with embedded data.",
   "data": {
     "url": "https://raw.githubusercontent.com/yujinsack/FIT3179Week10/main/population_density.csv"
